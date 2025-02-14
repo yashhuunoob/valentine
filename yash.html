@@ -1,0 +1,160 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  
+    <title>Happy Valentine's Day Mannu (Darling) ❤️</title>  
+    <style>  
+        /* Disable Scrolling & Zooming */  
+        html, body {  
+            margin: 0;  
+            padding: 0;  
+            font-family: 'Poppins', sans-serif;  
+            overflow: hidden;  
+            background: radial-gradient(circle, #ffb6c1, #ff69b4);  
+            color: white;  
+            height: 100vh;  
+            width: 100vw;  
+            touch-action: none;  
+        }  
+  
+        #content-container {  
+            height: 100vh;  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            position: relative;  
+            text-align: center;  
+        }  
+  
+        h1 {  
+            font-size: 4rem;  
+            text-shadow: 0 0 15px #ff69b4, 0 0 25px #ff1493;  
+        }  
+  
+        .note {  
+            font-size: 1.5rem;  
+            background: rgba(255, 255, 255, 0.2);  
+            padding: 20px;  
+            border-radius: 10px;  
+            width: 60%;  
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  
+            text-shadow: 0 0 10px #ffffff;  
+        }  
+  
+        .button {  
+            display: block;  
+            width: 250px;  
+            height: 50px;  
+            margin: 20px auto;  
+            background: #ff1493;  
+            color: white;  
+            border: none;  
+            font-size: 1.2rem;  
+            border-radius: 30px;  
+            cursor: pointer;  
+            transition: background 0.3s;  
+        }  
+  
+        .button:hover {  
+            background: #c71585;  
+        }  
+  
+        #hearts-container {  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            width: 100%;  
+            height: 100%;  
+            pointer-events: none;  
+        }  
+  
+        .heart {  
+            position: absolute;  
+            width: 50px;  
+            height: 50px;  
+            background: red;  
+            clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 75%, 25% 100%, 0% 35%);  
+            animation: float 4s ease-in-out forwards;  
+        }  
+  
+        @keyframes float {  
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }  
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }  
+        }  
+  
+        #notePage {  
+            display: none;  
+            background: radial-gradient(circle, #ffb6c1, #ff69b4);  
+            position: fixed;  
+            top: 0;  
+            left: 0;  
+            width: 100vw;  
+            height: 100vh;  
+            z-index: 2;  
+        }  
+  
+        .note-content {  
+            font-size: 1.5rem;  
+            background: rgba(255, 255, 255, 0.3);  
+            padding: 30px;  
+            border-radius: 10px;  
+            text-align: center;  
+            text-shadow: 0 0 10px #ffffff;  
+            color: white;  
+            max-width: 80%;  
+            margin: auto;  
+            position: relative;  
+            top: 30%;  
+        }  
+    </style>  
+</head>  
+<body>  
+  
+    <div id="content-container">  
+        <h1>Happy Valentine's Day Mannu (Darling) ❤️</h1>  
+        <div class="note">  
+            You are the most beautiful reality of my life.  
+            Every moment with you feels like magic,  
+            and every day without you feels incomplete.  
+            ❤️ With love, Yash ❤️  
+        </div>  
+        <button class="button" onclick="openNotePage()">Open My Special Note</button>  
+    </div>  
+  
+    <div id="hearts-container"></div>  
+  
+    <div id="notePage">  
+        <div class="note-content">  
+            My Dearest Mannu (Darling),  
+            Every time I think of you, a smile appears on my face.  
+            Your laughter is the most beautiful melody in my world.  
+            On this Valentine's Day, I just want to say  
+            that your happiness means everything to me.  
+            May all your dreams come true,  
+            and may every laugh you have be because of me.  
+            ❤️ Yours forever, Yash ❤️  
+        </div>  
+    </div>  
+  
+    <script>  
+        const heartsContainer = document.getElementById('hearts-container');  
+  
+        function createHeart() {  
+            const heart = document.createElement('div');  
+            heart.classList.add('heart');  
+            heart.style.left = Math.random() * window.innerWidth + 'px';  
+            heartsContainer.appendChild(heart);  
+            heart.addEventListener('animationend', () => heart.remove());  
+        }  
+  
+        setInterval(createHeart, 400);  
+  
+        function openNotePage() {  
+            document.getElementById('notePage').style.display = 'block';  
+        }  
+    </script>  
+  
+</body>  
+</html>
